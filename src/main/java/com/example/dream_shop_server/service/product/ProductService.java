@@ -20,6 +20,7 @@ public class ProductService implements IProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
 
+
     @Override
     public Product addProduct(AddProductRequest request) {
 
@@ -31,6 +32,7 @@ public class ProductService implements IProductService {
 
         request.setCategory(category);
         return productRepository.save(createProduct(request, category));
+
 
     }
 
